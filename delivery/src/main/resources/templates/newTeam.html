@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/vue.js"></script>
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+    <script src="../static/js/axios.js"></script>
+    <script src="../static/js/bootstrapValidator.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/formal.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrapValidator.min.css" />
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">即时高校信息发布系统</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的空间</span></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户组 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">我的用户组</a></li>
+                        <li><a href="#">新建用户组</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">信息 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">最新信息</a></li>
+                        <li><a href="#">动态</a></li>
+                        <li><a href="#">发布信息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">姓名！！！ <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">设置</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="info-content">
+    <h3><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>用户组昵称</h3>
+    <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2">Title</span>
+        <input type="text" class="form-control" id="infoTitle" placeholder="信息标题" aria-describedby="sizing-addon2">
+    </div>
+    <div>
+        <h3><span class="glyphicon glyphicon-list" aria-hidden="true"></span>用户组简介</h3>
+        <textarea class="textArea" id="infoContent"></textarea>
+    </div>
+    <div class="colDiv">
+        <input id="lefile" type="file" style="display:none">
+        <div class="input-append">
+            <span class="glyphicon glyphicon-upload"  aria-hidden="true">团队头像</span>
+            <input id="photoCover" class="input-large" type="text" style="height:30px;">
+            <a class="btn btn-default" onclick="$('input[id=lefile]').click();">Browse</a>
+        </div>
+    </div>
+    <div class="colDiv centerButton">
+        <button class="btn btn-info">提交</button>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $('input[id=lefile]').change(function() {
+        $('#photoCover').val($(this).val());
+    });
+</script>
+</body>
+</html>
